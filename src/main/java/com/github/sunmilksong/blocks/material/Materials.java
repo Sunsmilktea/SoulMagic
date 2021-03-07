@@ -26,7 +26,6 @@ public class Materials extends Material {
         return false;
     }
 
-
     @Override
     public boolean isSolid() {
         return false;
