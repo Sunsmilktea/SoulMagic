@@ -1,6 +1,7 @@
 package com.github.sunmilksong.util.handlers;
 
 import com.github.sunmilksong.init.ModBlocks;
+import com.github.sunmilksong.init.ModFluids;
 import com.github.sunmilksong.init.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -8,6 +9,8 @@ import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fluids.Fluid;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
@@ -16,22 +19,29 @@ import net.minecraftforge.registries.IForgeRegistry;
 
 import java.util.Objects;
 
-import static com.github.sunmilksong.init.ModFluids.registerFluids;
-import static com.github.sunmilksong.init.ModFluids.registerModelFluid;
 import static com.github.sunmilksong.tools.ToolCom.setRegisterNames;
+import static com.github.sunmilksong.util.handlers.ModelHandler.registerModelFluid;
 
 /**
  * @author SUNMILKSONG
  */
 @Mod.EventBusSubscriber
 public class RegistryHandler {
+
     @SubscribeEvent
     public static void onBlockRegister(RegistryEvent.Register<Block> event) {
-        registerFluids();
+        IForgeRegistry<Block> register = event.getRegistry();
+
+        for (Fluid fluid : ModFluids.FLUIDS) {
+            FluidRegistry.registerFluid(fluid);
+            FluidRegistry.addBucketForFluid(fluid);
+        }
+
         for (Block block : ModBlocks.BLOCKS) {
             event.getRegistry().register(block);
         }
     }
+
 
     @SubscribeEvent
     public static void onItemRegister(RegistryEvent.Register<Item> event) {

@@ -27,11 +27,9 @@ public class BlockCrop extends BlockCrops {
     public BlockCrop(String name) {
         super();
 
-
         this.setUnlocalizedName(Reference.MOD_ID + "." + name);
         this.setRegistryName(name);
         this.setSoundType(SoundType.PLANT);
-
 
         ModBlocks.BLOCKS.add(this);
     }
@@ -69,11 +67,7 @@ public class BlockCrop extends BlockCrops {
     @Override
     protected boolean canSustainBush(IBlockState state) {
 
-        if (isPlantBlock(state.getBlock())) {
-            return true;
-        } else {
-            return false;
-        }
+        return isPlantBlock(state.getBlock());
     }
 
     /**
@@ -92,11 +86,7 @@ public class BlockCrop extends BlockCrops {
         //2
 
         //1-1
-        if (soulSand && light1) {
-            return true;
-        } else {
-            return false;
-        }
+        return soulSand && light1;
     }
 
     /**

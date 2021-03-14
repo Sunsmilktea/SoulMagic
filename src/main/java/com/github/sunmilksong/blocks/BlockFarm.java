@@ -1,6 +1,5 @@
 package com.github.sunmilksong.blocks;
 
-import com.github.sunmilksong.init.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -25,8 +24,6 @@ public class BlockFarm extends BlockBase {
         super(name, material, sound);
         this.setDefaultState(this.blockState.getBaseState());
         this.setTickRandomly(true);
-
-        ModBlocks.BLOCKS.add(this);
     }
 
     public static void turnToSand(World worldIn, BlockPos pos) {

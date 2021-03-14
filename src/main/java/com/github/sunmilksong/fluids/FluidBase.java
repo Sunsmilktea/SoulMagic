@@ -13,14 +13,13 @@ import javax.annotation.Nonnull;
  */
 public class FluidBase extends Fluid {
 
-
     @Nonnull
     public FluidBase(String fluidName, int density, int viscosity, int luminosity, int temperature, boolean gaseous, Material material, int color) {
 
         super(fluidName,
                 new ResourceLocation(Reference.MOD_ID + ":fluids/" + fluidName + "_still"),
                 new ResourceLocation(Reference.MOD_ID + ":fluids/" + fluidName + "_flow"),
-                new ResourceLocation(Reference.MOD_ID + ":fluids/" + fluidName + "_overlay"),color);
+                new ResourceLocation(Reference.MOD_ID + ":fluids/" + fluidName + "_overlay"), color);
 
         this.setUnlocalizedName(Reference.MOD_ID + "." + fluidName);
         this.setDensity(density);
@@ -31,6 +30,8 @@ public class FluidBase extends Fluid {
 
         ModFluids.FLUIDS.add(this);
     }
-
 }
+
+
+
 

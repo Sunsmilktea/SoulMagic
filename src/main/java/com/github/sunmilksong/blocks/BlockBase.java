@@ -14,7 +14,6 @@ import net.minecraft.creativetab.CreativeTabs;
 public class BlockBase extends Block {
 
     public BlockBase(String name, Material material, SoundType soundType) {
-
         super(material);
 
         this.setUnlocalizedName(Reference.MOD_ID + "." + name);

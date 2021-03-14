@@ -1,6 +1,5 @@
 package com.github.sunmilksong.blocks;
 
-import com.github.sunmilksong.init.ModBlocks;
 import com.github.sunmilksong.init.ModItems;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -27,8 +26,6 @@ public class BlockOre extends BlockBase {
 
         this.setHarvestLevel(toolClass, level);
         this.setHardness(hardness);
-
-        ModBlocks.BLOCKS.add(this);
     }
 
 

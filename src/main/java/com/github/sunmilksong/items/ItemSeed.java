@@ -1,7 +1,6 @@
 package com.github.sunmilksong.items;
 
 
-import com.github.sunmilksong.init.ModItems;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
@@ -34,15 +33,13 @@ public class ItemSeed extends ItemBase {
 
         this.plants = plants;
         this.plantBlock = plantBlock;
-
-        ModItems.ITEMS.add(this);
     }
 
     @Nonnull
     @Override
     public EnumActionResult onItemUse(EntityPlayer player, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
 
-        //主手放置,副手无效
+        //获取左手物品,主手放置,副手无效
         ItemStack itemstack = player.getHeldItem(hand);
 
         //获取当前块位置
