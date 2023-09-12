@@ -10,6 +10,9 @@ import net.minecraftforge.client.model.ModelLoader;
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 
+/**
+ * @author Sunmilksong
+ */
 @ParametersAreNonnullByDefault
 public class ModelHandler {
 

@@ -13,9 +13,9 @@ public class ItemBase extends Item {
     public ItemBase(String name) {
         super();
 
-        setUnlocalizedName(Reference.MOD_ID + "." + name);
-        setRegistryName(name);
-        setCreativeTab(CreativeTabs.MATERIALS);
+        this.setUnlocalizedName(Reference.MOD_ID + "." + name);
+        this.setRegistryName(name);
+        this.setCreativeTab(CreativeTabs.MATERIALS);
 
         ModItems.ITEMS.add(this);
     }

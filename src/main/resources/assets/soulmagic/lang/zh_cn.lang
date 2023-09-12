@@ -16,4 +16,10 @@ tile.soulmagic.soul_sand.name=灵魂尘土
 
 tile.soulmagic.soul.crop.name=灵魂作物
 
-fluid.
+fluid.soulmagic.spirit_fluid=灵魂粘浆
+
+#附魔
+
+enchantment.soulmagic.soul_stop=灵魂停滞
+
+enchantment.soulmagic.soul_boom=灵魂爆破

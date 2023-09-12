@@ -2,19 +2,20 @@ package com.github.sunmilksong.fluids;
 
 import com.github.sunmilksong.init.ModFluids;
 import com.github.sunmilksong.util.Reference;
-import net.minecraft.block.material.Material;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fluids.Fluid;
-
-import javax.annotation.Nonnull;
 
 /**
  * @author SUNMILKSONG
  */
 public class FluidBase extends Fluid {
+    /*
+    Forge给出的可继承的流体类：
+    BlockFluidClassic表示经典流体,类似水和熔岩那种性质的流体。
+    BlockFluidFinite表示有限流体，类似神秘时代咒波那种性质的流体。
+     */
 
-    @Nonnull
-    public FluidBase(String fluidName, int density, int viscosity, int luminosity, int temperature, boolean gaseous, Material material, int color) {
+    public FluidBase(String fluidName, int density, int viscosity, int luminosity, int temperature, boolean gaseous, int color) {
 
         super(fluidName,
                 new ResourceLocation(Reference.MOD_ID + ":fluids/" + fluidName + "_still"),

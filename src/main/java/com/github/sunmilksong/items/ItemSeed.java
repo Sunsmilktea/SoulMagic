@@ -35,6 +35,12 @@ public class ItemSeed extends ItemBase {
         this.plantBlock = plantBlock;
     }
 
+    /**
+     * onItemUses
+     * 使用物品的方法
+     *
+     * @return EnumActionResult
+     */
     @Nonnull
     @Override
     public EnumActionResult onItemUse(EntityPlayer player, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
@@ -53,9 +59,16 @@ public class ItemSeed extends ItemBase {
                 && facing == EnumFacing.UP
 
                 //传入pos pos参数由EnumFacing.UP通过offset转换成pos,传入EnumFacing.UP,传入物品堆
+                //检查当前玩家是否能够破坏或放置方块与这个方块在特定的位置上，朝向也固定，并且与其他方块之间有一定的距离。
                 && player.canPlayerEdit(pos.offset(facing), facing, itemstack)) {
 
             //在世界中放置作物,获取默认状态
+            /*
+            将指定位置（pos）上方（up()）的方块替换成预设的植物（this.plants.getDefaultState()）。
+            其中，worldIn 是一个 Instance 用于修改特定的世界实例，
+            pos 是指定方块的位置，up() 代表上方的方块位置，
+            this.plants.getDefaultState() 则是获取要放置植物的默认状态。
+            */
             worldIn.setBlockState(pos.up(), this.plants.getDefaultState());
 
             if (player instanceof EntityPlayerMP) {

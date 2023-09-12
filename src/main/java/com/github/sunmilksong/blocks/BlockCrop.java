@@ -62,7 +62,7 @@ public class BlockCrop extends BlockCrops {
     }
 
     /**
-     * 支持种植的耕地
+     * 允许作物种植的方块
      */
     @Override
     protected boolean canSustainBush(IBlockState state) {
@@ -71,17 +71,16 @@ public class BlockCrop extends BlockCrops {
     }
 
     /**
-     * 作物维持的耕地
+     * 维持作物生长的耕地
      */
     @Override
     public boolean canBlockStay(World worldIn, BlockPos pos, IBlockState state) {
 
         IBlockState plantBlock = worldIn.getBlockState(pos.down());
 
-        int a = 5;
         //1
         boolean soulSand = plantBlock.getBlock() == ModBlocks.SOUL_SAND;
-        boolean light1 = worldIn.getLight(pos) >= a;
+        boolean light1 = worldIn.getLight(pos) >= 5;
 
         //2
 
@@ -89,9 +88,9 @@ public class BlockCrop extends BlockCrops {
         return soulSand && light1;
     }
 
-    /**
-     * 设置作物生长级别的属性
-     *  protected PropertyInteger getAgeProperty()
+    /*
+      设置作物生长级别的属性
+       protected PropertyInteger getAgeProperty()
      */
 
     /**
@@ -106,9 +105,9 @@ public class BlockCrop extends BlockCrops {
         }
     }
 
-    /**
-     * 设置作物最大生长级别的属性
-     * public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
+    /*
+      设置作物最大生长级别的属性
+      public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
      */
 
     /**
@@ -121,8 +120,8 @@ public class BlockCrop extends BlockCrops {
     }
 }
 
-/**
- * 设置作物区块状态
- * protected BlockStateContainer createBlockState()
+/*
+  设置作物区块状态
+  protected BlockStateContainer createBlockState()
  */
 

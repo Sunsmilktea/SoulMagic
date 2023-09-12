@@ -15,3 +15,9 @@ tile.soulmagic.soul_sand.name=Soul Farmland
 #crop
 
 tile.soulmagic.soul.crop.name=Soul Crop
+
+fluid.soulmagic.spirit_fluid=Soul Fluid
+
+enchantment.soulmagic.soul_stop=Soul Stop
+
+enchantment.soulmagic.soul_boom=Soul Boom

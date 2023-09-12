@@ -1,5 +1,6 @@
 package com.github.sunmilksong.blocks;
 
+import com.github.sunmilksong.blocks.material.Materials;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -41,7 +42,7 @@ public class BlockFarm extends BlockBase {
     public boolean hasLiquidOrBlock(World worldIn, BlockPos pos) {
 
         boolean hasWater = false;
-        boolean hasLava = false;
+        boolean hasSoul = false;
 
         for (BlockPos.MutableBlockPos bM : BlockPos.getAllInBoxMutable
                 (pos.add(-1, 0, -1), pos.add(1, -1, 1))) {
@@ -50,11 +51,11 @@ public class BlockFarm extends BlockBase {
                 hasWater = true;
             }
 
-            if (worldIn.getBlockState(bM).getMaterial() == Material.LAVA) {
-                hasLava = true;
+            if (worldIn.getBlockState(bM).getMaterial() == Materials.SPIRIT) {
+                hasSoul = true;
             }
         }
-        return hasWater && hasLava;
+        return hasWater && hasSoul;
     }
 
     @Override
