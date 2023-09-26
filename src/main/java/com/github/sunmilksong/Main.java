@@ -15,9 +15,11 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_VERSIONS)
 public class Main {
 
+    //定义一个Mod实例
     @Mod.Instance
     public static Main instance;
 
+    //定义一个SidedProxy实例
     @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.COMMON_PROXY_CLASS)
     public static CommonProxy proxy;
 
@@ -26,16 +28,21 @@ public class Main {
         FluidRegistry.enableUniversalBucket();
     }
 
+    //FMLPreInitializationEvent事件
     @Mod.EventHandler
     public static void preInit(FMLPreInitializationEvent event) {
     }
 
+    //FMLInitializationEvent事件
     @Mod.EventHandler
     public static void init(FMLInitializationEvent event) {
 
     }
 
+    //FMLPostInitializationEvent事件
     @Mod.EventHandler
     public static void postInit(FMLPostInitializationEvent event) {
     }
+
 }
+

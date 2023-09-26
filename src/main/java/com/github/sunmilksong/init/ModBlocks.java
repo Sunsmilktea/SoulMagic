@@ -2,7 +2,7 @@ package com.github.sunmilksong.init;
 
 import com.github.sunmilksong.blocks.*;
 import com.github.sunmilksong.blocks.material.Materials;
-import com.github.sunmilksong.fluids.FluidSoul;
+import com.github.sunmilksong.fluids.FluidBlockSoul;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
@@ -35,7 +35,7 @@ public class ModBlocks {
 
     //流体块
 
-    public static final FluidSoul SPIRIT = new
-            FluidSoul("spirit_block", ModFluids.SPIRIT, Materials.SPIRIT, MapColor.SNOW);
+    public static final FluidBlockSoul SPIRIT = new
+            FluidBlockSoul("spirit_block", ModFluids.SPIRIT, Materials.SPIRIT, MapColor.SNOW);
 }
 

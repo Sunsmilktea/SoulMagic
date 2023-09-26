@@ -6,11 +6,9 @@ import com.github.sunmilksong.init.ModFluids;
 import com.github.sunmilksong.init.ModItems;
 import com.github.sunmilksong.proxy.ClientProxy;
 import net.minecraft.block.Block;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
-import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
@@ -20,8 +18,8 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.registries.IForgeRegistry;
 
-import static com.github.sunmilksong.structure.SubstanceNe.setRegisterNames;
 import static com.github.sunmilksong.util.handlers.ModelHandler.registerModelFluid;
+import static com.github.sunmilksong.util.handlers.ModelHandler.setRegisterNames;
 
 /**
  * @author SUNMILKSONG
