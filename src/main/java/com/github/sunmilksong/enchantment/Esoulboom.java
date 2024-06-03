@@ -1,7 +1,7 @@
-package com.github.sunmilksong.enchantment;
+package com.github.sunmilktea.enchantment;
 
-import com.github.sunmilksong.init.ModEnchant;
-import com.github.sunmilksong.util.Reference;
+import com.github.sunmilktea.init.ModEnchant;
+import com.github.sunmilktea.util.Reference;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnumEnchantmentType;
 import net.minecraft.inventory.EntityEquipmentSlot;

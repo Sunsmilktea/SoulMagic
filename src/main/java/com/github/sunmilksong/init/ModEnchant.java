@@ -1,7 +1,7 @@
-package com.github.sunmilksong.init;
+package com.github.sunmilktea.init;
 
-import com.github.sunmilksong.enchantment.Esoulboom;
-import com.github.sunmilksong.enchantment.Esoulstop;
+import com.github.sunmilktea.enchantment.Esoulboom;
+import com.github.sunmilktea.enchantment.Esoulstop;
 import net.minecraft.enchantment.Enchantment;
 
 import java.util.ArrayList;

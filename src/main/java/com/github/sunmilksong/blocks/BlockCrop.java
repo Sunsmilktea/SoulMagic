@@ -1,8 +1,8 @@
-package com.github.sunmilksong.blocks;
+package com.github.sunmilktea.blocks;
 
-import com.github.sunmilksong.init.ModBlocks;
-import com.github.sunmilksong.init.ModItems;
-import com.github.sunmilksong.util.Reference;
+import com.github.sunmilktea.init.ModBlocks;
+import com.github.sunmilktea.init.ModItems;
+import com.github.sunmilktea.util.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.block.SoundType;
@@ -27,7 +27,7 @@ public class BlockCrop extends BlockCrops {
     public BlockCrop(String name) {
         super();
 
-        this.setUnlocalizedName(Reference.MOD_ID + "." + name);
+        this.setTranslationKey(Reference.MOD_ID + "." + name);
         this.setRegistryName(name);
         this.setSoundType(SoundType.PLANT);
 

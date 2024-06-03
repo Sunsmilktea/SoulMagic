@@ -1,8 +1,7 @@
-package com.github.sunmilksong.init;
+package com.github.sunmilktea.init;
 
-import com.github.sunmilksong.items.ItemBase;
-import com.github.sunmilksong.items.ItemSeed;
-import com.github.sunmilksong.structure.SubstanceNe;
+import com.github.sunmilktea.items.ItemBase;
+import com.github.sunmilktea.items.ItemSeed;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 
@@ -13,7 +12,7 @@ import java.util.List;
 /**
  * @author SUNMILKSONG
  */
-public class ModItems extends SubstanceNe {
+public class ModItems {
 
     public static final List<Item> ITEMS = new ArrayList<>();
     //普通物品

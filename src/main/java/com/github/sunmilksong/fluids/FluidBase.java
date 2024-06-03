@@ -1,7 +1,7 @@
-package com.github.sunmilksong.fluids;
+package com.github.sunmilktea.fluids;
 
-import com.github.sunmilksong.init.ModFluids;
-import com.github.sunmilksong.util.Reference;
+import com.github.sunmilktea.init.ModFluids;
+import com.github.sunmilktea.util.Reference;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fluids.Fluid;
 

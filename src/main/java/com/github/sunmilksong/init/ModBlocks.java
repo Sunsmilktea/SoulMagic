@@ -1,8 +1,8 @@
-package com.github.sunmilksong.init;
+package com.github.sunmilktea.init;
 
-import com.github.sunmilksong.blocks.*;
-import com.github.sunmilksong.blocks.material.Materials;
-import com.github.sunmilksong.fluids.FluidBlockSoul;
+import com.github.sunmilktea.blocks.*;
+import com.github.sunmilktea.blocks.material.Materials;
+import com.github.sunmilktea.fluids.FluidBlockSoul;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
@@ -17,7 +17,7 @@ public class ModBlocks {
 
     public static final List<Block> BLOCKS = new ArrayList<>();
 
-    public static final BlockBase SOLID_STATE_SOUL = new
+    public static final BlockTransparent SOLID_STATE_SOUL = new
             BlockTransparent("solid_state_soul", Materials.IRON, SoundType.GLASS);
 
     public static final BlockBase SOUL_SAND = new
@@ -35,7 +35,7 @@ public class ModBlocks {
 
     //流体块
 
-    public static final FluidBlockSoul SPIRIT = new
+    public static final Block SPIRIT = new
             FluidBlockSoul("spirit_block", ModFluids.SPIRIT, Materials.SPIRIT, MapColor.SNOW);
 }
 

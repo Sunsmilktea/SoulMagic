@@ -1,6 +1,6 @@
-package com.github.sunmilksong.init;
+package com.github.sunmilktea.init;
 
-import com.github.sunmilksong.fluids.FluidBase;
+import com.github.sunmilktea.fluids.FluidBase;
 import net.minecraftforge.fluids.Fluid;
 
 import java.util.ArrayList;

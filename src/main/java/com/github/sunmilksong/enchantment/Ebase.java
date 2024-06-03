@@ -1,4 +1,4 @@
-package com.github.sunmilksong.enchantment;
+package com.github.sunmilktea.enchantment;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnumEnchantmentType;

@@ -1,7 +1,7 @@
-package com.github.sunmilksong;
+package com.github.sunmilktea;
 
-import com.github.sunmilksong.proxy.CommonProxy;
-import com.github.sunmilksong.util.Reference;
+import com.github.sunmilktea.proxy.CommonProxy;
+import com.github.sunmilktea.util.Reference;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;

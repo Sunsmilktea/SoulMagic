@@ -1,6 +1,6 @@
-package com.github.sunmilksong.util.handlers;
+package com.github.sunmilktea.util.handlers;
 
-import com.github.sunmilksong.init.ModEnchant;
+import com.github.sunmilktea.init.ModEnchant;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -18,11 +18,11 @@ public class EventHandler {
 
 
     @SubscribeEvent
-public static void onLivingDeath(LivingDeathEvent event) {
+    public static void onLivingDeath(LivingDeathEvent event) {
         //获取事件的来源
         Entity source = event.getSource().getImmediateSource();
         //如果来源是一个玩家，并且不是客户端
-        if (source instanceof EntityPlayer &&!source.world.isRemote) {
+        if (source instanceof EntityPlayer && !source.world.isRemote) {
             //获取玩家
             EntityPlayer player = (EntityPlayer) source;
             //获取玩家的主手物品

@@ -1,4 +1,4 @@
-package com.github.sunmilksong.items;
+package com.github.sunmilktea.items;
 
 
 import net.minecraft.advancements.CriteriaTriggers;

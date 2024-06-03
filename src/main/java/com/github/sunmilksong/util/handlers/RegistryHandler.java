@@ -1,10 +1,10 @@
-package com.github.sunmilksong.util.handlers;
+package com.github.sunmilktea.util.handlers;
 
-import com.github.sunmilksong.init.ModBlocks;
-import com.github.sunmilksong.init.ModEnchant;
-import com.github.sunmilksong.init.ModFluids;
-import com.github.sunmilksong.init.ModItems;
-import com.github.sunmilksong.proxy.ClientProxy;
+import com.github.sunmilktea.init.ModBlocks;
+import com.github.sunmilktea.init.ModEnchant;
+import com.github.sunmilktea.init.ModFluids;
+import com.github.sunmilktea.init.ModItems;
+import com.github.sunmilktea.proxy.ClientProxy;
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.Item;
@@ -18,8 +18,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.registries.IForgeRegistry;
 
-import static com.github.sunmilksong.util.handlers.ModelHandler.registerModelFluid;
-import static com.github.sunmilksong.util.handlers.ModelHandler.setRegisterNames;
+import static com.github.sunmilktea.proxy.CommonProxy.setRegisterNames;
 
 /**
  * @author SUNMILKSONG
@@ -29,7 +28,7 @@ public class RegistryHandler {
 
     @SubscribeEvent
     public static void onBlockRegister(RegistryEvent.Register<Block> event) {
-        IForgeRegistry<Block> register = event.getRegistry();
+        IForgeRegistry<Block> BlockRegister = event.getRegistry();
 
         for (Fluid fluid : ModFluids.FLUIDS) {
             FluidRegistry.registerFluid(fluid);
@@ -37,43 +36,48 @@ public class RegistryHandler {
         }
 
         for (Block block : ModBlocks.BLOCKS) {
-            event.getRegistry().register(block);
+            BlockRegister.register(block);
         }
     }
 
     @SubscribeEvent
     public static void onItemRegister(RegistryEvent.Register<Item> event) {
-        IForgeRegistry<Item> register = event.getRegistry();
+        IForgeRegistry<Item> ItemRegister = event.getRegistry();
 
         //普通物品
-        register.register(ModItems.SOUL);
-        register.register(ModItems.SOUL_SEED);
+        ItemRegister.register(ModItems.SOUL);
+        ItemRegister.register(ModItems.SOUL_SEED);
         //方块物品
-        register.register(setRegisterNames(ModItems.SOLID_STATE_SOUL));
-        register.register(setRegisterNames(ModItems.SOLID_ORE));
-        register.register(setRegisterNames(ModItems.SOUL_SAND));
+        ItemRegister.register(setRegisterNames(ModItems.SOLID_STATE_SOUL));
+        ItemRegister.register(setRegisterNames(ModItems.SOLID_ORE));
+        ItemRegister.register(setRegisterNames(ModItems.SOUL_SAND));
     }
 
     @SubscribeEvent
     public static void onEnchantment(RegistryEvent.Register<Enchantment> event) {
-        IForgeRegistry<Enchantment> register = event.getRegistry();
+        IForgeRegistry<Enchantment> EnchantmentRegister = event.getRegistry();
 
-        register.register(ModEnchant.SOUL_STOP);
-        register.register(ModEnchant.SOUL_BOOM);
+        EnchantmentRegister.register(ModEnchant.SOUL_STOP);
+        EnchantmentRegister.register(ModEnchant.SOUL_BOOM);
 
     }
 
     @SubscribeEvent
     @SideOnly(Side.CLIENT)
-    public static void onModelRegistery(ModelRegistryEvent event) {
-        registerModelFluid();
+    public static void setModelRegistery(ModelRegistryEvent event) {
 
         //普通物品
-        ClientProxy.modelRegistery(ModItems.SOUL,0);
-        ClientProxy.modelRegistery(ModItems.SOUL_SEED,0);
+        ClientProxy.setModelBlocksItems(ModItems.SOUL);
+        ClientProxy.setModelBlocksItems(ModItems.SOUL_SEED);
         //方块物品
-        ClientProxy.modelRegistery(ModItems.SOLID_STATE_SOUL,0);
-        ClientProxy.modelRegistery(ModItems.SOLID_ORE,0);
-        ClientProxy.modelRegistery(ModItems.SOUL_SAND,0);
+        ClientProxy.setModelBlocksItems(ModItems.SOLID_STATE_SOUL);
+        ClientProxy.setModelBlocksItems(ModItems.SOLID_ORE);
+        ClientProxy.setModelBlocksItems(ModItems.SOUL_SAND);
+    }
+
+    @SubscribeEvent
+    @SideOnly(Side.CLIENT)
+    public static void setFluidModelRegister(ModelRegistryEvent event) {
+        ClientProxy.setModelFluid(ModBlocks.SPIRIT, "spirit_fluid");
     }
 }
